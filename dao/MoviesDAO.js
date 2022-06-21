@@ -45,8 +45,8 @@ export default class MoviesDAO {
 			const totalNumMovies = await MoviesDAO.movies.countDocuments(query);
 			return {movieList, totalNumMovies};
 		}
-		catch (e){
-			console.error(`Unable to issue find command, $(e)`);
+		catch (e){			
+			console.error(`Server us running on port ${e}`);
 			return {movieList: [], totalNumMovies: 0};
 		}
 	}
