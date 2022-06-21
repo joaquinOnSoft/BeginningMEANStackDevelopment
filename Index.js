@@ -3,6 +3,7 @@ import cors from 'cors';
 import MoviesRoute from './api/MoviesRoute.js';
 import dotenv from 'dotenv';
 import mongodb from 'mongodb';
+import MoviesDAO from './dao/MoviesDAO.js';
 
 class Index {
 	static app = express();
@@ -20,6 +21,7 @@ class Index {
 		try{
 			//Connect to MongoDB Cluster
 			await client.connect();
+			await MoviesDAO.injectDB(client);
 		} catch (e){
 			console.error(e);
 			process.exit(-1);
