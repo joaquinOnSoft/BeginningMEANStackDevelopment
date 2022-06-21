@@ -41,13 +41,13 @@ export default class MoviesDAO {
 				.limit(moviesPerPage)
 				.skip(moviesPerPage * page);
 
-			const movieList = await cursor.toArray();
+			const moviesList = await cursor.toArray();
 			const totalNumMovies = await MoviesDAO.movies.countDocuments(query);
-			return {movieList, totalNumMovies};
+			return {moviesList, totalNumMovies};
 		}
 		catch (e){			
 			console.error(`Server us running on port ${e}`);
-			return {movieList: [], totalNumMovies: 0};
+			return {moviesList: [], totalNumMovies: 0};
 		}
 	}
 }
