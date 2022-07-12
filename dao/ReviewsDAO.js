@@ -25,10 +25,12 @@ export default class ReviewsDAO {
 				user_id: user._id,
 				date,
 				review,
-				movie_id: ReviewDAO.reviews.insertOne(reviewDoc)
+				movie_id: ReviewsDAO.ObjectId(movieId)
 			};
 
-			return await ReviewDAO.review.insertOne(reviewDoc); 
+			console.log(JSON.stringify(reviewDoc));
+
+			return await ReviewsDAO.reviews.insertOne(reviewDoc); 
 		}
 		catch(e){
 			console.error(`Unable to post review ${e}`);
@@ -49,6 +51,8 @@ export default class ReviewsDAO {
 					}
 				);
 
+			console.log(JSON.stringify(updateResponse));
+
 			return updateResponse;
 		}
 		catch(e){
@@ -66,6 +70,8 @@ export default class ReviewsDAO {
 						user_id: userId						
 					}
 				);
+
+			console.log(JSON.stringify(deleteResponse));			
 
 			return deleteResponse;
 		}
