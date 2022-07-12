@@ -27,6 +27,26 @@ export default class MoviesRoute {
 	 * 			}
 	 * 			</code>
 	 * 		</li>
+	 * 		<li>
+	 * 			[PUT] http://localhost:5000/api/v1/movies/review
+	 * 			<code>
+	 * 			{
+	 * 			    "review_id": "62cd8b11880afc8a05b11e52",
+	 * 			    "review": "Bad movie",
+	 * 			    "user_id": "1234",
+	 * 			    "name": "John"
+	 * 			}
+	 * 			</code>
+	 * 		</li>
+	 * 		<li>
+	 * 			[DELETE] http://localhost:5000/api/v1/movies/review
+	 * 			<code>
+	 *    		{
+	 *        		"review_id": "62cd947219d5657e4b67274e",
+	 *        		"user_id": "1234"
+	 *    		}
+	 * 			</code>
+	 * 		</li>
 	 * </ul>
 	 */
 	static configRoutes(router){
