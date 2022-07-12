@@ -4,6 +4,7 @@ import MoviesRoute from './api/MoviesRoute.js';
 import dotenv from 'dotenv';
 import mongodb from 'mongodb';
 import MoviesDAO from './dao/MoviesDAO.js';
+import ReviewsDAO from './dao/ReviewsDAO.js';
 
 class Index {
 	static app = express();
@@ -22,6 +23,7 @@ class Index {
 			//Connect to MongoDB Cluster
 			await client.connect();
 			await MoviesDAO.injectDB(client);
+			await ReviewsDAO.injectDB(client);			
 		} catch (e){
 			console.error(e);
 			process.exit(-1);

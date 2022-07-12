@@ -11,7 +11,7 @@ export default class ReviewsDAO {
 		}
 
 		try{
-			ReviewsDAO.reviews = await conn.db(process.env.MOVIEREVIEWS_NS).collection(reviews);
+			ReviewsDAO.reviews = await conn.db(process.env.MOVIEREVIEWS_NS).collection('reviews');
 		}
 		catch(e){
 			console.log(`Unable to establish connection handle in ReviewsDAO`);
