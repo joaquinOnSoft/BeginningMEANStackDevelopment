@@ -79,6 +79,5 @@ export default class ReviewsDAO {
 			console.error(`Unable to update review ${e}`);
 			return { error: e };
 		}		
-
 	}	
 }

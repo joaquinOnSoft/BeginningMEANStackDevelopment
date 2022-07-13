@@ -47,10 +47,16 @@ export default class MoviesRoute {
 	 *    		}
 	 * 			</code>
 	 * 		</li>
+	 * 		<li>[GET] http://localhost:5000/api/v1/movies/id/573a1390f29313caabcd4135</li>
+	 * 		<li>[GET] http://localhost:5000/api/v1/movies/ratings</li>
 	 * </ul>
 	 */
 	static configRoutes(router){
 		router.route('/').get(MoviesController.apiGetMovies);
+
+		router.route('/id/:id').get(MoviesController.apiGetMovieById);
+
+		router.route('/ratings').get(MoviesController.apiGetRatings);
 
 		router.route('/review')
 			.post(ReviewsController.apiPostReview)
