@@ -37,4 +37,4 @@ http://localhost:4200/
 
 You will see something like this:
 
-![Angular simple alert frontend](images/angular-navbar-frontend.png)
+![Angular defining routes frontend](images/angular-defining-routes-frontend.png)
