@@ -21,3 +21,19 @@ cd BeginningMEANStackDevelopment
 node init
 nodemon server
 ```
+
+To launch the fronted, just execute these commands:
+
+```
+cd frontend
+ng server --open
+```
+
+Opent this URL in your browser:
+
+```
+http://localhost:4200/
+```
+
+You will see something like this:
+![Angular default frontend](images/angular-default-frontend.png)
