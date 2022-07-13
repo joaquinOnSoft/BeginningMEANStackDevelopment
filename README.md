@@ -36,4 +36,5 @@ http://localhost:4200/
 ```
 
 You will see something like this:
-![Angular simple alert frontend](images/angular-simple-alert-frontend.png)
+
+![Angular simple alert frontend](images/angular-navbar-frontend.png)
