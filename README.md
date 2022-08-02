@@ -2,6 +2,8 @@
 
 Examples of the book `Beginning MEAN Stack Development` by `Greg Lim`
 
+![Beginning MEAN Stack Development by Greg Lim](https://images-na.ssl-images-amazon.com/images/I/41ZkHY7qNVL._SX404_BO1,204,203,200_.jpg)
+
 There is a branch for each chapter, starting from chapter 6 on.
 
 Steps to start your Server
